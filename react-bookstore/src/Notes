@@ -1,0 +1,52 @@
+1. properly using containers and felx alignments etc at the Macro layout level.
+2. properly using item alignments for texts and items in a container etc.
+3. where to find a reference to changing margins, alignments, colors, backgrounds etc. that work.
+4. methods of using styling on one page with quick feedback. then later methods like ccs page and styling.
+5. proper wireframing of a page. with file and components breakdowns. and set state breakdowns
+6. where to set states. 
+7. set state with a class?
+8. set spinner when waiting for call
+9. add componentDidMount. 
+10. to make my calls I have to use axios?
+11. can you add the same book to cart more than once?
+12. where is price in this? 
+13. How are we suppose to know what is in the cart? no get http. 
+14. all methods or just psoe ant put??? HTTP for componentDidMount. 
+
+Customer
+As a customer, when I arrive to the home page, 
+  1. list of all of the books, 
+  2. search bar on top
+  3. checkout/cart area to the right.
+  4. book columns. id, title, author, pages, inCart, Admin buttons
+As a customer, I am able to filter the list of books by title or author.
+As a customer, I am able to add a book to the cart by clicking the "Add to cart" button.
+As a customer, when I add a book to the cart, I should see the total dollar amount be updated to reflect all of the books in the cart
+
+Admin
+  buttons
+  Create, 
+  delete,
+  edit,
+
+API Unit - Bookstore
+GET (all books) / POST (add book): http://localhost:8082/api/books
+DELETE: http://localhost:8082/api/books/:id
+PATCH (add book to cart): http://localhost:8082/api/books/cart/add/:id
+PATCH (remove book from cart): http://localhost:8082/api/books/cart/remove/:id
+
+
+Llberg@uw.edu
+
+lindsey, 
+
+current problem. 
+I have confused of how to proceed. 
+
+1. axios vs mounting vs await fetch vs class component. This.state? 
+2. where to fetch my data, 
+3. get it to test or console.log
+4. event handling via a button and grabbing book id. 
+5. returning and rendering. 
+6. I need to follow a clear easy developement process to follow. 
+  a. with lots of micro steps. 
