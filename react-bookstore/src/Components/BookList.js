@@ -18,11 +18,11 @@ console.log(props.books)
       </tr>
       </thead>
       <tbody>
-      {/* {
-        props.books.map(row =>
-          <BookRow addToCart={this.props.addToCart} row={row} key={row.id}/>
+      {
+        props.books && props.books.map(row =>
+          <BookRow addToCart={props.addToCart} row={row} key={row.id}/>
           )
-      } */}
+      }
       </tbody>
     </Table>
     )

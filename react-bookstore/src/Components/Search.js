@@ -5,9 +5,9 @@ class Search extends Component {
   render() {
     return (
     <div>
-      <div class="row">
-        <div class="col">
-        <input onChange={this.props.onChange(this.value) } value='' type="text" class="form-control" placeholder="Search by Title or Author"/>
+      <div className="row">
+        <div className="col">
+        <input onChange={this.props.onChange} value={this.props.search} type="text" className="form-control" placeholder="Search by Title or Author"/>
         </div>
       </div>
     </div>

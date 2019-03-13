@@ -36,9 +36,22 @@ removeFromCart = async (id) => {
   this.setState({books: json})
 }
 
-onChange = (search) => {
-console.log(search)
+onChange = ( e ) => {
+console.log(e.target.value)
+this.setState({search: e.target.value})
+console.log(this.state.search)
 
+}
+
+filteredbySearch = (book ) => {
+  let title = book.title.toLowerCase()
+  let author = book.author.toLowerCase()
+  let search = this.state.search.toLowerCase()
+  if (title.includes(search) || author.includes(search)){
+    return true
+  } else {
+    return false
+  }
 }
 
   render() { 
@@ -50,13 +63,13 @@ console.log(search)
             <div className='row'>
               <div className='col-6'>
 
-                <div class="card">
-                  <div class="card-body">
-                  <Search onChange={this.onChange}/>
+                <div className="card">
+                  <div className="card-body">
+                  <Search onChange={this.onChange} search={this.state.search}/>
                   </div>
                 </div>
 
-              <BookList addToCart={this.addToCart} books={this.state.books} inCart={this.state.inCart} style={{border: '30px solid green', borderColor: 'red' }}/>
+              <BookList addToCart={this.addToCart}  books={this.state.books.filter(this.filteredbySearch)} inCart={this.state.inCart} style={{border: '30px solid green', borderColor: 'red' }}/>
               </div>
 
               <div className='col-6'>
