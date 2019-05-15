@@ -15,23 +15,25 @@ class App extends Component {
     }
 }
 
+
+
 async componentDidMount() {
-  const response = await fetch('http://localhost:8082/api/books', {method: 'get'})
+  const response = await fetch(`${process.env.REACT_APP_API_URL}/api/books`, {method: 'get'})
   const json = await response.json()
   this.setState({books: json})   
   this.setState({filteredBooks: json})   
 }
 
 addToCart = async (addedbook) => {
-  await fetch(`http://localhost:8082/api/books/cart/add/${addedbook.id}`, {method: 'PATCH'})
-  const response = await fetch('http://localhost:8082/api/books', {method: 'get'})
+  await fetch(`${process.env.REACT_APP_API_URL}/api/books/cart/add/${addedbook.id}`, {method: 'PATCH'})
+  const response = await fetch(`${process.env.REACT_APP_API_URL}/api/books`, {method: 'get'})
   const json = await response.json()
   this.setState({books: json}) 
 }
 
 removeFromCart = async (id) => {
-  await fetch(`http://localhost:8082/api/books/cart/remove/${id}`, {method: 'PATCH'})
-  const response = await fetch('http://localhost:8082/api/books', {method: 'get'})
+  await fetch(`${process.env.REACT_APP_API_URL}/api/books/cart/remove/${id}`, {method: 'PATCH'})
+  const response = await fetch(`${process.env.REACT_APP_API_URL}/api/books`, {method: 'get'})
   const json = await response.json()
   this.setState({books: json})
 }

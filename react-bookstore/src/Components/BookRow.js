@@ -3,7 +3,6 @@ import { Button } from 'react-bootstrap'
 
 const BookRow = ( props) => {
   const bookItems = props
-  // console.log(props)
 
   return (
     

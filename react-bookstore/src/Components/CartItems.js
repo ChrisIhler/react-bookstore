@@ -1,7 +1,5 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
-import { Table } from 'react-bootstrap';
-// import { Button } from 'react-bootstrap'
 
 
 const CartItems = (props) => {

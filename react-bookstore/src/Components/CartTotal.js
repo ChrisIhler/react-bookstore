@@ -15,6 +15,5 @@ const CartTotal = (props) => {
   )
 }
 
-
 export default CartTotal
 
